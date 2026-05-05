@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cara Menghasilkan 10 Juta/Bulan dari Freelance</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --green: #FF6B00;
+    --green-dark: #E05A00;
+    --green-light: #FFE8EA;
+    --dark: #0D0A0B;
+    --dark-2: #160F10;
+    --dark-3: #1F1415;
+    --text: #F0E8E9;
+    --text-muted: #A08A8C;
+    --accent: #F5FF5C;
+    --orange: #FF9500;
+    --white: #FFFFFF;
+    --card-bg: #1A1011;
+    --border: rgba(232, 25, 44, 0.18);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--dark);
+    color: var(--text);
+    overflow-x: hidden;
+    line-height: 1.6;
+  }
+  h1, h2, h3, h4 { font-family: 'Plus Jakarta Sans', sans-serif; }
+
+  /* ─── NOISE OVERLAY ─── */
+  body::before {
+    content: '';
+    position: fixed; inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+    pointer-events: none; z-index: 9999; opacity: 0.4;
+  }
+
+  /* ─── UTILITY ─── */
+  .container { max-width: 860px; margin: 0 auto; padding: 0 24px; }
+  .green { color: var(--green); }
+  .accent { color: var(--accent); }
+  .orange { color: var(--orange); }
+  .strike { text-decoration: line-through; opacity: 0.5; }
+  .section { padding: 80px 0; }
+  .section-alt { background: var(--dark-2); }
+
+  /* ─── FADE IN ANIMATION ─── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(28px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .fade-in { animation: fadeUp 0.7s ease both; }
+  .fade-in-2 { animation: fadeUp 0.7s 0.15s ease both; }
+  .fade-in-3 { animation: fadeUp 0.7s 0.3s ease both; }
+  .fade-in-4 { animation: fadeUp 0.7s 0.45s ease both; }
+
+  /* ─── HERO / SECTION 1 ─── */
+  .hero {
+    background: radial-gradient(ellipse 80% 60% at 50% -10%, rgba(255,107,0,0.15) 0%, transparent 70%), var(--dark);
+    padding: 90px 0 70px;
+    text-align: center;
+    border-bottom: 1px solid var(--border);
+  }
+  .hero-badge {
+    display: inline-block;
+    background: rgba(255,107,0,0.12);
+    border: 1px solid rgba(255,107,0,0.3);
+    color: var(--green);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 6px 16px;
+    border-radius: 100px;
+    margin-bottom: 28px;
+  }
+  .hero h1 {
+    font-size: clamp(32px, 6vw, 58px);
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    margin-bottom: 20px;
+  }
+  .hero h1 span.line-block { display: block; }
+  .hero-sub {
+    font-size: clamp(16px, 2.5vw, 20px);
+    color: var(--text-muted);
+    max-width: 580px;
+    margin: 0 auto 36px;
+    font-weight: 400;
+  }
+  .hero-sub strong { color: var(--text); font-weight: 600; }
+  .mockup-wrap {
+    position: relative;
+    display: inline-block;
+    margin: 0 auto 44px;
+  }
+  .mockup-glow {
+    position: absolute;
+    width: 340px; height: 340px;
+    background: radial-gradient(circle, rgba(255,107,0,0.18) 0%, transparent 70%);
+    top: 50%; left: 50%; transform: translate(-50%,-50%);
+    pointer-events: none;
+  }
+  .mockup-card {
+    position: relative;
+    background: linear-gradient(145deg, #1E1008 0%, #1A0F06 100%);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 32px 36px;
+    width: 320px;
+    text-align: center;
+    box-shadow: 0 24px 80px rgba(0,0,0,0.5);
+    display: inline-block;
+  }
+  .mockup-emoji { font-size: 48px; margin-bottom: 12px; display: block; }
+  .mockup-title {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--white);
+    line-height: 1.35;
+    margin-bottom: 8px;
+  }
+  .mockup-sub { font-size: 12px; color: var(--text-muted); }
+  .mockup-bar {
+    margin-top: 18px;
+    background: rgba(255,107,0,0.12);
+    border-radius: 8px;
+    padding: 8px 12px;
+    font-size: 12px;
+    color: var(--green);
+    font-weight: 600;
+    letter-spacing: 0.04em;
+  }
+
+  /* ─── AGITATE ─── */
+  .agitate-box {
+    background: rgba(255,121,64,0.07);
+    border: 1px solid rgba(255,121,64,0.25);
+    border-radius: 14px;
+    padding: 28px 32px;
+    max-width: 700px;
+    margin: 0 auto 40px;
+    text-align: center;
+  }
+  .agitate-box .label {
+    font-size: 12px; font-weight: 700; letter-spacing: 0.1em;
+    text-transform: uppercase; color: var(--orange);
+    margin-bottom: 12px;
+  }
+  .agitate-box p {
+    font-size: 16px; color: var(--text-muted); line-height: 1.7;
+  }
+  .agitate-box p strong { color: var(--text); }
+
+  /* ─── CTA BUTTON ─── */
+  .cta-btn {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--green) 0%, var(--green-dark) 100%);
+    color: var(--white);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 700;
+    font-size: 17px;
+    padding: 18px 44px;
+    border-radius: 100px;
+    text-decoration: none;
+    letter-spacing: 0.01em;
+    box-shadow: 0 8px 32px rgba(255,107,0,0.35);
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+    cursor: pointer;
+    border: none;
+  }
+  .cta-btn:hover { transform: translateY(-3px); box-shadow: 0 14px 42px rgba(255,107,0,0.45); }
+  .cta-btn .arrow { margin-left: 8px; }
+  .cta-note { font-size: 13px; color: var(--text-muted); margin-top: 12px; }
+
+  /* ─── SECTION 2: BENEFIT ─── */
+  .section-title {
+    font-size: clamp(24px, 4vw, 36px);
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 12px;
+    letter-spacing: -0.01em;
+  }
+  .section-intro {
+    font-size: 17px; color: var(--text-muted);
+    max-width: 600px; margin: 0 auto 48px;
+  }
+  .benefit-list {
+    display: flex; flex-direction: column; gap: 16px;
+    max-width: 680px; margin: 0 auto;
+  }
+  .benefit-item {
+    display: flex; align-items: flex-start; gap: 16px;
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 20px 24px;
+    text-align: left;
+    transition: border-color 0.2s ease, transform 0.2s ease;
+  }
+  .benefit-item:hover { border-color: rgba(255,107,0,0.4); transform: translateX(4px); }
+  .benefit-icon {
+    width: 40px; height: 40px; border-radius: 10px;
+    background: rgba(255,107,0,0.12);
+  }
+  .benefit-text h4 { font-size: 15px; font-weight: 700; color: var(--white); margin-bottom: 4px; font-family: 'Plus Jakarta Sans', sans-serif; }
+  .benefit-text p { font-size: 14px; color: var(--text-muted); line-height: 1.6; }
+
+  /* ─── SECTION 3: BRIDGING ─── */
+  .bridging-headline {
+    font-size: clamp(26px, 4.5vw, 42px);
+    font-weight: 800;
+    line-height: 1.15;
+    max-width: 680px;
+    margin: 0 auto 36px;
+    letter-spacing: -0.02em;
+    text-align: center;
+  }
+  .book-showcase {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 36px;
+    flex-wrap: wrap;
+  }
+  .book-card {
+    background: linear-gradient(145deg, #1E1008 0%, #180E05 100%);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 28px 22px;
+    width: 160px;
+    text-align: center;
+    box-shadow: 0 16px 50px rgba(0,0,0,0.4);
+    transition: transform 0.2s ease;
+  }
+  .book-card:hover { transform: translateY(-6px); }
+  .book-card.main {
+    width: 200px; padding: 36px 26px;
+    box-shadow: 0 24px 70px rgba(255,107,0,0.2), 0 0 0 2px rgba(255,107,0,0.3);
+  }
+  .book-card .be { font-size: 40px; margin-bottom: 10px; display: block; }
+  .book-card.main .be { font-size: 52px; }
+  .book-card .bt {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 11px; font-weight: 700;
+    color: var(--green); text-transform: uppercase; letter-spacing: 0.06em;
+  }
+  .fbm-box {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 28px 32px;
+    max-width: 700px;
+    margin: 0 auto 40px;
+    text-align: center;
+    font-size: 17px;
+    line-height: 1.8;
+    color: var(--text-muted);
+  }
+  .fbm-box strong { color: var(--text); font-weight: 600; }
+
+  /* ─── SECTION 4: BONUS ─── */
+  .bonus-grid {
+    display: flex; flex-direction: column; gap: 20px;
+    max-width: 700px; margin: 0 auto 48px;
+  }
+  .bonus-card {
+    display: flex; align-items: center; gap: 20px;
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 22px 26px;
+  }
+  .bonus-icon {
+    width: 64px; height: 64px; border-radius: 14px;
+    background: rgba(255,107,0,0.1); border: 1px solid var(--border);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 32px; flex-shrink: 0;
+  }
+  .bonus-content { text-align: left; }
+  .bonus-tag {
+    font-size: 11px; font-weight: 700; letter-spacing: 0.08em;
+    text-transform: uppercase; color: var(--green); margin-bottom: 4px;
+  }
+  .bonus-content h4 { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 16px; font-weight: 700; color: var(--white); margin-bottom: 4px; }
+  .bonus-content p { font-size: 13px; color: var(--text-muted); line-height: 1.6; }
+  .bonus-price { font-size: 13px; color: var(--accent); font-weight: 600; margin-top: 4px; }
+
+  /* ─── SECTION 5: TESTIMONI ─── */
+  .testi-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px; max-width: 800px; margin: 0 auto 48px;
+  }
+  .testi-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 24px;
+    text-align: left;
+  }
+  .testi-stars { color: var(--accent); font-size: 16px; margin-bottom: 12px; letter-spacing: 2px; }
+  .testi-card p { font-size: 14px; color: var(--text-muted); line-height: 1.75; margin-bottom: 16px; }
+  .testi-card p em { color: var(--text); font-style: normal; font-weight: 600; }
+  .testi-author { display: flex; align-items: center; gap: 10px; }
+  .testi-avatar {
+    width: 36px; height: 36px; border-radius: 50%;
+    background: linear-gradient(135deg, #FF8C2A 0%, #E05A00 100%);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 16px; font-weight: 700; color: var(--dark);
+    font-family: 'Plus Jakarta Sans', sans-serif; flex-shrink: 0;
+  }
+  .testi-name { font-size: 14px; font-weight: 600; color: var(--text); }
+  .testi-meta { font-size: 12px; color: var(--text-muted); }
+  .testi-badge {
+    display: inline-block;
+    background: rgba(255,107,0,0.12); border: 1px solid rgba(255,107,0,0.3);
+    color: var(--green); font-size: 12px; font-weight: 600;
+    padding: 4px 12px; border-radius: 100px; margin-bottom: 32px;
+  }
+
+  /* ─── SECTION 6: OFFER STACK ─── */
+  .value-stack {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 36px 40px;
+    max-width: 620px;
+    margin: 0 auto 32px;
+  }
+  .value-row {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 14px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+  .value-row:last-child { border-bottom: none; }
+  .value-row .name { font-size: 15px; color: var(--text-muted); display: flex; align-items: center; gap: 8px; }
+  .value-row .name span { font-size: 18px; }
+  .value-row .price { font-size: 15px; color: var(--text); font-weight: 600; }
+  .value-total {
+    background: rgba(255,107,0,0.08);
+    border: 1px solid rgba(255,107,0,0.25);
+    border-radius: 14px;
+    padding: 20px 32px;
+    max-width: 620px;
+    margin: 0 auto 32px;
+    display: flex; justify-content: space-between; align-items: center;
+  }
+  .value-total .label { font-size: 15px; color: var(--text-muted); font-weight: 600; }
+  .value-total .total { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 22px; font-weight: 800; color: var(--green); }
+  .offer-box {
+    text-align: center;
+    background: linear-gradient(135deg, #1C1005 0%, #1A1007 100%);
+    border: 2px solid rgba(255,107,0,0.35);
+    border-radius: 20px;
+    padding: 40px 36px;
+    max-width: 540px;
+    margin: 0 auto 36px;
+  }
+  .offer-box .tapi { font-size: 14px; color: var(--text-muted); font-weight: 500; margin-bottom: 8px; }
+  .offer-box .old-price {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 28px; font-weight: 700;
+    color: var(--text-muted);
+    text-decoration: line-through;
+    opacity: 0.5;
+    margin-bottom: 4px;
+  }
+  .offer-box .new-price {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 58px; font-weight: 800;
+    color: var(--green);
+    line-height: 1;
+    margin-bottom: 10px;
+  }
+  .offer-box .discount-tag {
+    display: inline-block;
+    background: var(--orange);
+    color: white;
+    font-size: 13px; font-weight: 700;
+    padding: 4px 14px; border-radius: 100px;
+    margin-bottom: 4px;
+  }
+
+  /* ─── COUNTDOWN ─── */
+  .countdown-wrap {
+    max-width: 540px; margin: 0 auto 36px;
+    text-align: center;
+  }
+  .countdown-label { font-size: 14px; color: var(--text-muted); margin-bottom: 14px; }
+  .countdown { display: flex; justify-content: center; gap: 12px; }
+  .cd-block {
+    background: var(--dark-3);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 14px 18px;
+    min-width: 72px;
+    text-align: center;
+  }
+  .cd-block .num {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 32px; font-weight: 800;
+    color: var(--green); line-height: 1;
+    display: block;
+  }
+  .cd-block .unit { font-size: 11px; color: var(--text-muted); font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; margin-top: 4px; display: block; }
+
+  /* ─── SECTION 7: OBJECTION ─── */
+  .objection-box {
+    max-width: 660px; margin: 0 auto;
+    text-align: center;
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 48px 40px;
+  }
+  .objection-box .bayangkan {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 13px; font-weight: 700;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--green); margin-bottom: 24px;
+  }
+  .objection-box p {
+    font-size: 18px; line-height: 1.85;
+    color: var(--text-muted); margin-bottom: 20px;
+  }
+  .objection-box p strong { color: var(--text); }
+  .objection-box .final-cta { margin-top: 32px; }
+
+  /* ─── FOOTER ─── */
+  footer {
+    background: var(--dark-3);
+    border-top: 1px solid rgba(255,255,255,0.06);
+    padding: 32px 24px;
+    text-align: center;
+    font-size: 13px;
+    color: var(--text-muted);
+  }
+  footer a { color: var(--text-muted); text-decoration: none; }
+
+  /* ─── DIVIDER ─── */
+  .divider {
+    width: 60px; height: 3px;
+    background: linear-gradient(90deg, var(--green), transparent);
+    margin: 16px auto 0;
+    border-radius: 99px;
+  }
+
+  @media (max-width: 600px) {
+    .hero { padding: 60px 0 50px; }
+    .mockup-card { width: 100%; max-width: 300px; }
+    .offer-box .new-price { font-size: 44px; }
+    .bonus-card { flex-direction: column; text-align: center; }
+    .objection-box { padding: 36px 24px; }
+    .value-stack { padding: 28px 24px; }
+    .countdown { gap: 8px; }
+    .cd-block { min-width: 60px; padding: 12px 14px; }
+    .cd-block .num { font-size: 26px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════════
+  SECTION 1 – PROBLEM SETUP
+══════════════════════════════════════════════ -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-badge fade-in">💡 Khusus Pemula &amp; Yang Masih Stuck</div>
+    <h1 class="fade-in-2">
+      <span class="line-block">Masih Kerja Keras Tapi Penghasilan</span>
+      <span class="line-block green">Segitu-gitu Aja?</span>
+    </h1>
+    <p class="hero-sub fade-in-3">
+      Cara Menghasilkan <strong>10 Juta/Bulan dari Freelance</strong> —
+      Tanpa Skill Rumit. Cukup Modal AI &amp; Internet.
+    </p>
+
+    <div class="mockup-wrap fade-in-3">
+      <div class="mockup-glow"></div>
+      <div class="mockup-card">
+        <span class="mockup-emoji">💸</span>
+        <div class="mockup-title">CARA MENGHASILKAN<br>10 JUTA/BULAN<br>DARI FREELANCE</div>
+        <div class="mockup-sub">Tanpa Skill Rumit. Cukup Modal AI &amp; Internet.</div>
+        <div class="mockup-bar">E-BOOK · Blueprint Lengkap</div>
+      </div>
+    </div>
+
+    <div class="agitate-box fade-in-4">
+      <div class="label">⚠ Ini Masalah Kamu?</div>
+      <p>
+        <strong>Wajar aja kalau kamu udah coba freelance tapi hasilnya nihil.</strong>
+        Wajar aja kalau kamu nggak tau harus mulai dari mana.
+        Wajar aja kalau kamu pikir butuh skill canggih untuk bisa dibayar mahal.
+        <em>Karena mungkin kamu cuma pakai cara LAMA yang sudah tidak relevan.</em>
+      </p>
+    </div>
+
+    <div class="fade-in-4">
+      <a href="#offer" class="cta-btn">Saya Mau Solusinya <span class="arrow">→</span></a>
+      <p class="cta-note">Sudah dibuktikan ratusan freelancer Indonesia 🇮🇩</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════
+  SECTION 2 – PRESENT BENEFIT
+══════════════════════════════════════════════ -->
+<section class="section section-alt" style="text-align:center;">
+  <div class="container">
+    <h2 class="section-title">Yang Akan Kamu Dapatkan dari<br><span class="green">E-book Freelance 10 Juta/Bulan</span> 📘</h2>
+    <div class="divider"></div>
+    <p class="section-intro" style="margin-top:20px;">Blueprint nyata yang sudah diuji — bukan teori.</p>
+
+    <div class="benefit-list">
+      <div class="benefit-item">
+        <div class="benefit-icon">🎯</div>
+        <div class="benefit-text">
+          <h4>Pilih Niche Profitable dalam 1 Hari</h4>
+          <p>Kamu akan tahu persis niche freelance mana yang paling cepat menghasilkan — bahkan tanpa pengalaman sebelumnya.</p>
+        </div>
+      </div>
+      <div class="benefit-item">
+        <div class="benefit-icon">🤖</div>
+        <div class="benefit-text">
+          <h4>Gunakan AI sebagai Senjata Utama</h4>
+          <p>Rahasia menggunakan ChatGPT, Claude, dan tools AI lainnya untuk mengerjakan project klien lebih cepat dan lebih berkualitas.</p>
+        </div>
+      </div>
+      <div class="benefit-item">
+        <div class="benefit-icon">🏆</div>
+        <div class="benefit-text">
+          <h4>Menang Bid dari Kompetitor Berpengalaman</h4>
+          <p>Formula proposal yang terbukti membuat klien memilih kamu meski profil masih baru dan belum ada review.</p>
+        </div>
+      </div>
+      <div class="benefit-item">
+        <div class="benefit-icon">📈</div>
+        <div class="benefit-text">
+          <h4>Action Plan 30 Hari Pertama</h4>
+          <p>Panduan langkah-demi-langkah yang jelas — hari pertama kamu buka laptop, kamu sudah tahu harus ngapain.</p>
+        </div>
+      </div>
+      <div class="benefit-item">
+        <div class="benefit-icon">💼</div>
+        <div class="benefit-text">
+          <h4>Scaling Menuju 10 Juta/Bulan</h4>
+          <p>Strategi nyata untuk naik dari proyek kecil ke income stabil dan konsisten setiap bulannya.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════
+  SECTION 3 – PRODUCT BRIDGING
+══════════════════════════════════════════════ -->
+<section class="section" style="text-align:center;">
+  <div class="container">
+    <h2 class="bridging-headline">
+      Sama seperti kamu, <span class="orange">kebanyakan orang gagal di freelance</span> bukan karena kurang kerja keras — tapi karena strategi yang salah.
+    </h2>
+
+    <div class="book-showcase">
+      <div class="book-card">
+        <span class="be">🧠</span>
+        <div class="bt">Mindset</div>
+      </div>
+      <div class="book-card main">
+        <span class="be">💸</span>
+        <div class="bt">Blueprint Utama</div>
+      </div>
+      <div class="book-card">
+        <span class="be">🚀</span>
+        <div class="bt">Scaling</div>
+      </div>
+    </div>
+
+    <div class="fbm-box">
+      Sebuah panduan <strong>sederhana yang berisikan 12 bagian lengkap</strong>, namun sangat <strong>POWERFUL untuk membangun karir freelance dari nol sampai penghasilan 10 juta/bulan</strong>, sehingga <strong>kamu punya sistem yang bekerja bahkan saat kamu tidur.</strong>
+    </div>
+
+    <a href="#offer" class="cta-btn">Saya Ingin E-book Ini! <span class="arrow">→</span></a>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════
+  SECTION 4 – 3 LAYERS BONUS
+══════════════════════════════════════════════ -->
+<section class="section section-alt" style="text-align:center;">
+  <div class="container">
+    <div class="hero-badge">🎁 Kabar Baik! Khusus Kamu Hari Ini</div>
+    <h2 class="section-title" style="margin-top:16px;">BONUS EKSKLUSIF<br><span class="green">Senilai Rp608.000 — GRATIS!</span></h2>
+    <div class="divider"></div>
+
+    <div class="bonus-grid" style="margin-top:40px;">
+      <div class="bonus-card">
+        <div class="bonus-icon">🛠️</div>
+        <div class="bonus-content">
+          <div class="bonus-tag">#BONUS 1</div>
+          <h4>AI Tools Starter Kit untuk Freelancer</h4>
+          <p>Daftar lengkap 20+ tools AI gratis &amp; berbayar yang digunakan freelancer profesional — plus cara pakainya buat tiap jenis project.</p>
+          <div class="bonus-price">Senilai Rp 199.000</div>
+        </div>
+      </div>
+      <div class="bonus-card">
+        <div class="bonus-icon">📝</div>
+        <div class="bonus-content">
+          <div class="bonus-tag">#BONUS 2</div>
+          <h4>Template Proposal Pemenang</h4>
+          <p>5 template proposal siap pakai yang sudah terbukti memenangkan bid di Fiverr, Upwork, dan platform lokal — tinggal isi dan kirim.</p>
+          <div class="bonus-price">Senilai Rp 249.000</div>
+        </div>
+      </div>
+      <div class="bonus-card">
+        <div class="bonus-icon">💬</div>
+        <div class="bonus-content">
+          <div class="bonus-tag">#BONUS 3</div>
+          <h4>Script Negosiasi &amp; Client Management</h4>
+          <p>Skrip percakapan lengkap untuk negosiasi harga, handle klien rewel, dan minta review bintang 5 — tanpa drama dan awkward.</p>
+          <div class="bonus-price">Senilai Rp 160.000</div>
+        </div>
+      </div>
+    </div>
+
+    <a href="#offer" class="cta-btn">Saya Mau Semua Bonus Ini! <span class="arrow">→</span></a>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════
+  SECTION 5 – SOCIAL PROOF
+══════════════════════════════════════════════ -->
+<section class="section" style="text-align:center;">
+  <div class="container">
+    <h2 class="section-title">Mereka yang Sudah Merasakan<br><span class="green">Manfaatnya</span> 🙌</h2>
+    <div class="divider"></div>
+    <div class="testi-badge" style="margin-top:20px;">"Beneran bisa dari nol sampai dapat client pertama"</div>
+
+    <div class="testi-grid">
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p>Awalnya skeptis, tapi setelah ikutin action plan 30 hari-nya, <em>bulan pertama udah dapat Rp 3,5 juta dari Fiverr.</em> Sekarang udah bulan ke-4 dan income udah stabil di atas 8 juta. This is legit.</p>
+        <div class="testi-author">
+          <div class="testi-avatar">R</div>
+          <div>
+            <div class="testi-name">Rizal A.</div>
+            <div class="testi-meta">Freelance Copywriter · Bandung</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p>Yang paling game-changer buat aku adalah bagian AI Tools-nya. <em>Proyek yang biasanya makan 3 hari bisa selesai 6 jam.</em> Akhirnya bisa ambil lebih banyak client tanpa kelelahan.</p>
+        <div class="testi-author">
+          <div class="testi-avatar">S</div>
+          <div>
+            <div class="testi-name">Sinta M.</div>
+            <div class="testi-meta">Freelance Designer · Jakarta</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p>Baru lulus kuliah, nggak ada pengalaman, modal cuma laptop bekas. <em>Ikutin ebook ini step by step, 2 bulan kemudian sudah bisa bayar kos sendiri dari freelance.</em> Terima kasih!</p>
+        <div class="testi-author">
+          <div class="testi-avatar">F</div>
+          <div>
+            <div class="testi-name">Fadhil N.</div>
+            <div class="testi-meta">Freelance VA · Yogyakarta</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════
+  SECTION 6 – OFFER STACK
+══════════════════════════════════════════════ -->
+<section class="section section-alt" id="offer" style="text-align:center;">
+  <div class="container">
+    <h2 class="section-title">Jadi, yang Akan Kamu <span class="green">DAPATKAN</span></h2>
+    <div class="divider" style="margin-bottom:36px;"></div>
+
+    <div class="value-stack">
+      <div class="value-row">
+        <div class="name"><span>💸</span> E-book Freelance 10 Juta/Bulan</div>
+        <div class="price">Rp 350.000</div>
+      </div>
+      <div class="value-row">
+        <div class="name"><span>🛠️</span> BONUS 1: AI Tools Starter Kit</div>
+        <div class="price">Rp 199.000</div>
+      </div>
+      <div class="value-row">
+        <div class="name"><span>📝</span> BONUS 2: Template Proposal Pemenang</div>
+        <div class="price">Rp 249.000</div>
+      </div>
+      <div class="value-row">
+        <div class="name"><span>💬</span> BONUS 3: Script Negosiasi &amp; Client</div>
+        <div class="price">Rp 160.000</div>
+      </div>
+    </div>
+
+    <div class="value-total">
+      <div class="label">Total Value</div>
+      <div class="total">Rp 958.000</div>
+    </div>
+
+    <div class="offer-box">
+      <div class="tapi">Tapi, Khusus Hari Ini Menjadi</div>
+      <div class="old-price">Rp 958.000</div>
+      <div class="new-price">Rp 99.000</div>
+      <div class="discount-tag">Diskon 90% — Hari Ini Saja!</div>
+    </div>
+
+    <!-- COUNTDOWN -->
+    <div class="countdown-wrap">
+      <div class="countdown-label">⏳ Diskon hanya berlaku sebelum waktu habis:</div>
+      <div class="countdown">
+        <div class="cd-block">
+          <span class="num" id="cd-h">00</span>
+          <span class="unit">Jam</span>
+        </div>
+        <div class="cd-block">
+          <span class="num" id="cd-m">26</span>
+          <span class="unit">Menit</span>
+        </div>
+        <div class="cd-block">
+          <span class="num" id="cd-s">00</span>
+          <span class="unit">Detik</span>
+        </div>
+      </div>
+      <p style="font-size:13px;color:var(--text-muted);margin-top:12px;">Ingat, diskon menjadi Rp99.000 hanya berlaku sebelum waktu menunjukkan 00:00:00</p>
+    </div>
+
+    <a href="#" class="cta-btn" style="font-size:18px;padding:20px 52px;">
+      🛒 Saya Ingin Dapat Diskon 90%! <span class="arrow">→</span>
+    </a>
+    <p class="cta-note" style="margin-top:14px;">✅ Akses seumur hidup &nbsp;·&nbsp; ✅ Langsung download &nbsp;·&nbsp; ✅ Garansi 7 hari</p>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════
+  SECTION 7 – HANDLING OBJECTION
+══════════════════════════════════════════════ -->
+<section class="section" style="text-align:center;">
+  <div class="container">
+    <div class="objection-box">
+      <div class="bayangkan">✦ Bayangkan...</div>
+
+      <p>
+        Kita selalu percaya bahwa <strong>waktu adalah hal yang lebih berharga daripada uang</strong> — betul? Karena waktu yang terlewat tidak bisa didapatkan kembali.
+      </p>
+
+      <p>
+        Lantas, kenapa kita seringkali <strong>membuang-buang waktu dengan metode freelance yang sudah tidak relevan</strong> — kirim proposal nggak dibalas, income segitu-gitu aja, nggak tahu harus mulai dari mana?
+      </p>
+
+      <p>
+        Aku ingin kamu memiliki <strong>E-book Freelance 10 Juta/Bulan</strong> agar kamu <strong>bisa punya sistem penghasilan yang bebas dari batas geografis, bebas dari jam kantor, dan tumbuh terus setiap bulannya.</strong>
+      </p>
+
+      <p>
+        Investasi sebesar <strong>Rp99.000</strong> akan menjadi tidak ternilai jika dibandingkan dengan <strong>berbulan-bulan stuck di income yang sama tanpa tahu cara keluarnya.</strong>
+      </p>
+
+      <p style="font-size:20px;font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;color:var(--text);margin-bottom:0;">
+        Buatlah pilihanmu sekarang juga.
+      </p>
+
+      <div class="final-cta">
+        <a href="#offer" class="cta-btn" style="font-size:17px;">
+          Ya, Saya Mau Mulai Sekarang! <span class="arrow">→</span>
+        </a>
+        <p class="cta-note">Bergabung dengan ratusan freelancer Indonesia yang sudah membuktikannya</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════
+  FOOTER
+══════════════════════════════════════════════ -->
+<footer>
+  <div class="container">
+    <p>© 2025 Tech Pedia · Semua hak dilindungi.</p>
+    <p style="margin-top:8px;">
+      <a href="#">Syarat &amp; Ketentuan</a> &nbsp;·&nbsp;
+      <a href="#">Kebijakan Privasi</a> &nbsp;·&nbsp;
+      <a href="#">Hubungi Kami</a>
+    </p>
+    <p style="margin-top:12px;font-size:12px;opacity:0.6;">Hasil aktual dapat bervariasi. Strategi dalam ebook ini bersifat edukatif berdasarkan riset terhadap pengalaman freelancer nyata.</p>
+  </div>
+</footer>
+
+<script>
+  // Countdown timer — 23:59:59 dari saat halaman dibuka (atau simpan ke sessionStorage)
+  function startCountdown() {
+    const KEY = 'lp_cd_end';
+    let endTime = parseInt(sessionStorage.getItem(KEY));
+    if (!endTime || endTime < Date.now()) {
+      endTime = Date.now() + (23 * 3600 + 59 * 60 + 59) * 1000;
+      sessionStorage.setItem(KEY, endTime);
+    }
+
+    const hEl = document.getElementById('cd-h');
+    const mEl = document.getElementById('cd-m');
+    const sEl = document.getElementById('cd-s');
+
+    function update() {
+      const diff = Math.max(0, endTime - Date.now());
+      const h = Math.floor(diff / 3600000);
+      const m = Math.floor((diff % 3600000) / 60000);
+      const s = Math.floor((diff % 60000) / 1000);
+      hEl.textContent = String(h).padStart(2,'0');
+      mEl.textContent = String(m).padStart(2,'0');
+      sEl.textContent = String(s).padStart(2,'0');
+    }
+    update();
+    setInterval(update, 1000);
+  }
+  startCountdown();
+
+  // Scroll fade-in
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.style.opacity = '1'; e.target.style.transform = 'translateY(0)'; }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.benefit-item, .bonus-card, .testi-card').forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(20px)';
+    el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+    obs.observe(el);
+  });
+</script>
+</body>
+</html>
