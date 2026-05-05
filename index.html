@@ -7,8 +7,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet">
 <style>
   :root {
-    --green: #FF6B00;
-    --green-dark: #E05A00;
+    --green: #00C96F;
+    --green-dark: #00A85A;
     --green-light: #FFE8EA;
     --dark: #0D0A0B;
     --dark-2: #160F10;
@@ -16,7 +16,7 @@
     --text: #F0E8E9;
     --text-muted: #A08A8C;
     --accent: #F5FF5C;
-    --orange: #FF9500;
+    --orange: #FF7940;
     --white: #FFFFFF;
     --card-bg: #1A1011;
     --border: rgba(232, 25, 44, 0.18);
@@ -61,15 +61,15 @@
 
   /* ─── HERO / SECTION 1 ─── */
   .hero {
-    background: radial-gradient(ellipse 80% 60% at 50% -10%, rgba(255,107,0,0.15) 0%, transparent 70%), var(--dark);
+    background: radial-gradient(ellipse 80% 60% at 50% -10%, rgba(0,201,111,0.15) 0%, transparent 70%), var(--dark);
     padding: 90px 0 70px;
     text-align: center;
     border-bottom: 1px solid var(--border);
   }
   .hero-badge {
     display: inline-block;
-    background: rgba(255,107,0,0.12);
-    border: 1px solid rgba(255,107,0,0.3);
+    background: rgba(0,201,111,0.12);
+    border: 1px solid rgba(0,201,111,0.3);
     color: var(--green);
     font-size: 13px;
     font-weight: 600;
@@ -103,13 +103,13 @@
   .mockup-glow {
     position: absolute;
     width: 340px; height: 340px;
-    background: radial-gradient(circle, rgba(255,107,0,0.18) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(0,201,111,0.18) 0%, transparent 70%);
     top: 50%; left: 50%; transform: translate(-50%,-50%);
     pointer-events: none;
   }
   .mockup-card {
     position: relative;
-    background: linear-gradient(145deg, #1E1008 0%, #1A0F06 100%);
+    background: linear-gradient(145deg, #1a2e22 0%, #0f1f16 100%);
     border: 1px solid var(--border);
     border-radius: 20px;
     padding: 32px 36px;
@@ -130,7 +130,7 @@
   .mockup-sub { font-size: 12px; color: var(--text-muted); }
   .mockup-bar {
     margin-top: 18px;
-    background: rgba(255,107,0,0.12);
+    background: rgba(0,201,111,0.12);
     border-radius: 8px;
     padding: 8px 12px;
     font-size: 12px;
@@ -163,7 +163,7 @@
   .cta-btn {
     display: inline-block;
     background: linear-gradient(135deg, var(--green) 0%, var(--green-dark) 100%);
-    color: var(--white);
+    color: var(--dark);
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-weight: 700;
     font-size: 17px;
@@ -171,12 +171,12 @@
     border-radius: 100px;
     text-decoration: none;
     letter-spacing: 0.01em;
-    box-shadow: 0 8px 32px rgba(255,107,0,0.35);
+    box-shadow: 0 8px 32px rgba(0,201,111,0.35);
     transition: transform 0.18s ease, box-shadow 0.18s ease;
     cursor: pointer;
     border: none;
   }
-  .cta-btn:hover { transform: translateY(-3px); box-shadow: 0 14px 42px rgba(255,107,0,0.45); }
+  .cta-btn:hover { transform: translateY(-3px); box-shadow: 0 14px 42px rgba(0,201,111,0.45); }
   .cta-btn .arrow { margin-left: 8px; }
   .cta-note { font-size: 13px; color: var(--text-muted); margin-top: 12px; }
 
@@ -205,10 +205,10 @@
     text-align: left;
     transition: border-color 0.2s ease, transform 0.2s ease;
   }
-  .benefit-item:hover { border-color: rgba(255,107,0,0.4); transform: translateX(4px); }
+  .benefit-item:hover { border-color: rgba(0,201,111,0.4); transform: translateX(4px); }
   .benefit-icon {
     width: 40px; height: 40px; border-radius: 10px;
-    background: rgba(255,107,0,0.12);
+    background: rgba(0,201,111,0.12);
   }
   .benefit-text h4 { font-size: 15px; font-weight: 700; color: var(--white); margin-bottom: 4px; font-family: 'Plus Jakarta Sans', sans-serif; }
   .benefit-text p { font-size: 14px; color: var(--text-muted); line-height: 1.6; }
@@ -232,7 +232,7 @@
     flex-wrap: wrap;
   }
   .book-card {
-    background: linear-gradient(145deg, #1E1008 0%, #180E05 100%);
+    background: linear-gradient(145deg, #1a2e22 0%, #0f1a12 100%);
     border: 1px solid var(--border);
     border-radius: 16px;
     padding: 28px 22px;
@@ -244,7 +244,7 @@
   .book-card:hover { transform: translateY(-6px); }
   .book-card.main {
     width: 200px; padding: 36px 26px;
-    box-shadow: 0 24px 70px rgba(255,107,0,0.2), 0 0 0 2px rgba(255,107,0,0.3);
+    box-shadow: 0 24px 70px rgba(0,201,111,0.2), 0 0 0 2px rgba(0,201,111,0.3);
   }
   .book-card .be { font-size: 40px; margin-bottom: 10px; display: block; }
   .book-card.main .be { font-size: 52px; }
@@ -281,7 +281,7 @@
   }
   .bonus-icon {
     width: 64px; height: 64px; border-radius: 14px;
-    background: rgba(255,107,0,0.1); border: 1px solid var(--border);
+    background: rgba(0,201,111,0.1); border: 1px solid var(--border);
     display: flex; align-items: center; justify-content: center;
     font-size: 32px; flex-shrink: 0;
   }
@@ -312,7 +312,7 @@
   .testi-author { display: flex; align-items: center; gap: 10px; }
   .testi-avatar {
     width: 36px; height: 36px; border-radius: 50%;
-    background: linear-gradient(135deg, #FF8C2A 0%, #E05A00 100%);
+    background: linear-gradient(135deg, var(--green) 0%, #00a85a 100%);
     display: flex; align-items: center; justify-content: center;
     font-size: 16px; font-weight: 700; color: var(--dark);
     font-family: 'Plus Jakarta Sans', sans-serif; flex-shrink: 0;
@@ -321,7 +321,7 @@
   .testi-meta { font-size: 12px; color: var(--text-muted); }
   .testi-badge {
     display: inline-block;
-    background: rgba(255,107,0,0.12); border: 1px solid rgba(255,107,0,0.3);
+    background: rgba(0,201,111,0.12); border: 1px solid rgba(0,201,111,0.3);
     color: var(--green); font-size: 12px; font-weight: 600;
     padding: 4px 12px; border-radius: 100px; margin-bottom: 32px;
   }
@@ -345,8 +345,8 @@
   .value-row .name span { font-size: 18px; }
   .value-row .price { font-size: 15px; color: var(--text); font-weight: 600; }
   .value-total {
-    background: rgba(255,107,0,0.08);
-    border: 1px solid rgba(255,107,0,0.25);
+    background: rgba(0,201,111,0.08);
+    border: 1px solid rgba(0,201,111,0.25);
     border-radius: 14px;
     padding: 20px 32px;
     max-width: 620px;
@@ -357,8 +357,8 @@
   .value-total .total { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 22px; font-weight: 800; color: var(--green); }
   .offer-box {
     text-align: center;
-    background: linear-gradient(135deg, #1C1005 0%, #1A1007 100%);
-    border: 2px solid rgba(255,107,0,0.35);
+    background: linear-gradient(135deg, #0f1e13 0%, #162219 100%);
+    border: 2px solid rgba(0,201,111,0.35);
     border-radius: 20px;
     padding: 40px 36px;
     max-width: 540px;
